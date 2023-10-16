@@ -50,11 +50,11 @@ Skoro $E[\bar{\mu}] = \mu$, to $\bar{\mu}$ jest estymatorem nieobciążonym.
 
 Zaproponujmy estymator wiaruancji zmiennych losowych, gdzie $\bar{\mu}$ jest nieobciążonym estymatorem wartości oczekiwanej.
 
-\[\bar{\sigma}^2 = \frac{1}{n}\sum_{i=1}^{n}{{(X_i - \bar{\mu})}^2} = \frac{1}{n}\sum_{i=1}^{n}{(X_i^2 - 2X_i\bar{\mu} + \bar{\mu}^2)} = \frac{1}{n}\sum_{i=1}^{n}{X_i^2} - 2\bar{\mu}\overbrace{\frac{1}{n}\sum_{i=1}^{n}{X_i}}^{\text{$\bar{\mu}$}} + \frac{1}{n}n\bar{\mu}^2 = \frac{1}{n}\sum_{i=1}^{n}{X_i} - \bar{\mu}^2\]
+\[\bar{\sigma}^2 = \frac{1}{n}\sum_{i=1}^{n}{{(X_i - \bar{\mu})}^2} = \frac{1}{n}\sum_{i=1}^{n}{(X_i^2 - 2X_i\bar{\mu} + \bar{\mu}^2)} = \frac{1}{n}\sum_{i=1}^{n}{X_i^2} - 2\bar{\mu}\overbrace{\frac{1}{n}\sum_{i=1}^{n}{X_i^2}}^{\text{$\bar{\mu}$}} + \frac{1}{n}n\bar{\mu}^2 = \frac{1}{n}\sum_{i=1}^{n}{X_i^2} - \bar{\mu}^2\]
 
-Z tego dalej
+Z tego dalej, biorąc pod uwagę $\sigma^2 = E[X^2] - \mu^2$ oraz $Var[\bar{\mu}] = \frac{\sigma^2}{n}$
 
-\[E[\bar{\sigma}^2] = E\left[\frac{1}{n}\sum_{i=1}^{n}{X_i} - \bar{\mu}^2\right] = \frac{1}{n}\sum_{i=1}^{n}{E[X_i]} - E[\bar{\mu}^2] = \frac{1}{n}\sum_{i=1}^{n}{(\sigma^2 + \mu^2)} - \left(\frac{\sigma^2}{n} + \mu^2\right) = \sigma^2 + \mu^2 - \frac{\sigma^2}{n} - \mu^2 = \frac{(n-1)\sigma^2}{n}\]
+\[E[\bar{\sigma}^2] = E\left[\frac{1}{n}\sum_{i=1}^{n}{X_i^2} - \bar{\mu}^2\right] = \frac{1}{n}\sum_{i=1}^{n}{E[X_i^2]} - E[\bar{\mu}^2] = \frac{1}{n}\sum_{i=1}^{n}{(\sigma^2 + \mu^2)} - \left(\frac{\sigma^2}{n} + \mu^2\right) = \sigma^2 + \mu^2 - \frac{\sigma^2}{n} - \mu^2 = \frac{(n-1)\sigma^2}{n}\]
 
 Jak łatwo zauważyć, ten estymator ma bias $\frac{n-1}{n}$. Aby się go pozbyć, wystarczy przemnożyć go przez $\frac{n}{n-1}$
 
